@@ -1,0 +1,5 @@
+package com.epdelivery.epdelivery.dto;
+
+public class OrderDTO {
+
+}

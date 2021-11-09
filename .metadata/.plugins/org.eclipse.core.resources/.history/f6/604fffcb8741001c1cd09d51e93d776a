@@ -1,0 +1,9 @@
+package com.epdelivery.epdelivery.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.epdelivery.epdelivery.entities.Order;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
+	
+}
