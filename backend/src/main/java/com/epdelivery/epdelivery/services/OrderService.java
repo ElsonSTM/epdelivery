@@ -34,7 +34,7 @@ public class OrderService {
 	@Transactional
 	public OrderDTO insert(OrderDTO dto) {
 		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(),
-				Instant.now(), OrderStatus.PENDING);
+				Instant.now(), OrderStatus.EMPREPARACAO);
 		for(ProductDTO p : dto.getProducts()) {                      //Criando o pedido com os itens
 			Product product = productRepository.getOne(p.getId());
 			order.getProducts().add(product);
@@ -44,9 +44,18 @@ public class OrderService {
 	}
 	
 	@Transactional
-	public OrderDTO setDelivered(Long id) {
+	public OrderDTO setSaiuParaEntrega(Long id) {
 		Order order = repository.getOne(id);
-		order.setStatus(OrderStatus.DELIVERED);
+		order.setStatus(OrderStatus.SAIUPARAENTREGA);
+		order = repository.save(order);
+		return new OrderDTO(order);
+	}
+	
+	
+	@Transactional
+	public OrderDTO setEntregue(Long id) {
+		Order order = repository.getOne(id);
+		order.setStatus(OrderStatus.ENTREGUE);
 		order = repository.save(order);
 		return new OrderDTO(order);
 	}

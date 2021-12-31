@@ -34,13 +34,19 @@ public class OrderController {
 	public ResponseEntity<OrderDTO> insert(@RequestBody OrderDTO dto){
 		dto = service.insert(dto);
 		URI uri= ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(dto.getId()).toUri();
+				.buildAndExpand(dto.getId()).toUri(); //Chamar a uri do recurso criado
 		return ResponseEntity.created(uri).body(dto);
 	}
 	
-	@PutMapping("/{id}/delivered")
-	public ResponseEntity<OrderDTO> setDelivered(@PathVariable Long id){
-		OrderDTO dto = service.setDelivered(id);
+	@PutMapping("/{id}/saiuparaentrega")
+	public ResponseEntity<OrderDTO> setSaiuParaEntrega(@PathVariable Long id){
+		OrderDTO dto = service.setSaiuParaEntrega(id);
+		return ResponseEntity.ok().body(dto);
+	}
+	
+	@PutMapping("/{id}/entregue")
+	public ResponseEntity<OrderDTO> setEntregue(@PathVariable Long id){
+		OrderDTO dto = service.setEntregue(id);
 		return ResponseEntity.ok().body(dto);
 	}
 }

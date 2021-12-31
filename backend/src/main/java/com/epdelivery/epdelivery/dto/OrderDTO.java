@@ -13,6 +13,8 @@ public class OrderDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	//DTO -> converter os dados do banco de dodos em objeto.
+	
 	private Long id;
 	private String address;
 	private Double latitude;

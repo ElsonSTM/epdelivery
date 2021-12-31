@@ -30,10 +30,10 @@ public class Order implements Serializable {
 	private Instant moment;
 	private OrderStatus status;
 	
-	@ManyToMany
-	@JoinTable(name = "tb_order_product", 
-		joinColumns = @JoinColumn(name = "order_id"),
-		inverseJoinColumns = @JoinColumn(name = "product_id"))
+	@ManyToMany //muitos para muitos
+	@JoinTable(name = "tb_order_product", // 3 tabela para a junção da order / product
+		joinColumns = @JoinColumn(name = "order_id"), //chave estrangeira
+		inverseJoinColumns = @JoinColumn(name = "product_id")) //chave estrangeira
 	private Set<Product> products = new HashSet<>();
 	
 	public Order() {
