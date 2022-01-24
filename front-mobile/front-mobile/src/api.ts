@@ -6,3 +6,7 @@ const API_URL = 'http://192.168.3.39:8080';
 export function fetchOrders() {
   return axios(`${API_URL}/orders`)
 }
+
+export function confirmarEngrega(orderId: number) {
+  return axios.put(`${API_URL}/orders/${orderId}/entregue`)
+}
