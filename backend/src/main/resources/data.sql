@@ -1,3 +1,19 @@
+INSERT INTO tb_user (name, email, password) VALUES ('Paulo Afonso', 'paulo.afonso@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Elson Pinheiro', 'engelp@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Maria Alice', 'malice@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Gabriel Nunes', 'gnunes@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+
+INSERT INTO tb_role (autority) VALUES ('ROLE_ADMIN');
+INSERT INTO tb_role (autority) VALUES ('ROLE_COZINHEIRO');
+INSERT INTO tb_role (autority) VALUES ('ROLE_CLIENTE');
+INSERT INTO tb_role (autority) VALUES ('ROLE_MOTOBOY');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (4, 4);
+
 INSERT INTO tb_product (name, price, image_Uri, description) VALUES ('Churrasquinho', 10.0, 'https://raw.githubusercontent.com/ElsonSTM/epdelivery/main/imagens/espetinho.jpg', 'Espetinho de frango com mussarela, orégano, molho especial e tempero da casa.');
 INSERT INTO tb_product (name, price, image_Uri, description) VALUES ('Copo Amendoin', 9.0, 'https://raw.githubusercontent.com/ElsonSTM/epdelivery/main/imagens/amendoin.jpg', 'Copo de amendoin, bem torradinho.');
 INSERT INTO tb_product (name, price, image_Uri, description) VALUES ('Suco de lanranja', 8.0, 'https://raw.githubusercontent.com/ElsonSTM/epdelivery/main/imagens/suco_laranja.png', 'Suco de laranja, geladinho e bem doce');
