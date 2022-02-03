@@ -21,7 +21,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	@Autowired
 	private JwtTokenStore tokenStore;
 	
-	private static final String[] PUBLIC = { "/oauth/token", "/h2-console/**" };
+	private static final String[] PUBLIC = { "/oauth/token", "/h2-console/**", "/products/**" };
 	
 	private static final String[] COZINHEIRO_OR_MOTOBOY = { "/orders/**", "/products/**" };
 	
@@ -41,9 +41,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		}
 		
 		http.authorizeRequests()
-		//Rotas de acesso ao aplicativo
+		//Rotas de acesso ao aplicativo e listar produtos
 		.antMatchers(PUBLIC).permitAll()
-
+		
 		.antMatchers(COZINHEIRO_OR_MOTOBOY).permitAll()
 		.antMatchers(COZINHEIRO_OR_MOTOBOY).hasAnyRole("COZINHEIRO", "MOTOBOY")
 		
