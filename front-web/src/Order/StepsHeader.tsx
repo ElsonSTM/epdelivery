@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function StepsHeader(){
   return (
     <header className="orders-steps-container">
@@ -15,8 +17,12 @@ function StepsHeader(){
             <span className="steps-number">2</span>
             Depois clique em <strong>"ENVIAR PEDIDO"</strong>
           </li>
-
         </ul>
+      </div>
+      <div className="order-summary-make-ckech">
+      <Link to="/tracker" >
+        ACOMPANHAR PEDIDO
+      </Link>
       </div>
     </header>
   )
