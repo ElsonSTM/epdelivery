@@ -39,7 +39,7 @@ Resquisitos de sofware para testar as rotas e ver a persistencia dos dados no BD
 <p>-- Port: 5432 </p> 
 <p>-- Database: d20j83effp82t9 </p> 
 <p>-- Username: wlorecngsufeim </p> 
-                
+<p>-- Password: 8f71179e8c8af9aefd4de0369fb210b9127baccb06e3219cbb3200241d8fb4ca </p>         
 * Aba advanced </br>
 
 <p> -- Db restriction: d20j83effp82t9 </P>
@@ -125,7 +125,7 @@ INSERT INTO tb_order_product (order_id, product_id) VALUES (7 , 5);
 
 <b> User </b> </br>
 <b> Rota: New user </b> </br>
-Endpoint: (POST) http://localhost:8080/users
+Endpoint: (POST) https://epdelivery.herokuapp.com/users
 ````
 {
   "name": "Pedro Paulo",
@@ -140,7 +140,7 @@ Endpoint: (POST) http://localhost:8080/users
 ````
 
 <b> Rota: Update User </b> </br>
-Endpoint: (PUT) http://localhost:8080/users/1
+Endpoint: (PUT) https://epdelivery.herokuapp.com/users/1
 ````
 {
 "name": "João Tadeu",
@@ -155,29 +155,29 @@ Endpoint: (PUT) http://localhost:8080/users/1
 ````
 
 <b> Rota: Delete user </b> </br>
-Endpoint: (DEL) http://localhost:8080/users/1
+Endpoint: (DEL) https://epdelivery.herokuapp.com/users/1
 
 <b> Rota: User paged (lista paginada) </b></br>
-Endpoint: (GET) http://localhost:8080/users?page=0&size=12&sort=name 
+Endpoint: (GET) https://epdelivery.herokuapp.com/users?page=0&size=12&sort=name 
 
 <b> Rota: User id (busca de usuário por id) </b></br>
-Endpoint: (GET) http://localhost:8080/users/1
+Endpoint: (GET) https://epdelivery.herokuapp.com/users/1
 
 <br>
 
 <b>Product</b> </br>
 <b> Rota: Lista de protudos </b> </br> 
-Endpoint: (GET) http://localhost:8080/products
+Endpoint: (GET) https://epdelivery.herokuapp.com/products
 
 <br>
 
 <b>Order</b> </br>
 <b> Rota: Lista de pedidos </b> </br> 
-Endpoint: (GET) http://localhost:8080/orders
+Endpoint: (GET) https://epdelivery.herokuapp.com/orders
 
 </br>
 <b> Rota: New Order </b> </br> 
-Endpoint: (POST) http://localhost:8080/orders
+Endpoint: (POST) https://epdelivery.herokuapp.com/orders
 
 </br>
 
@@ -200,12 +200,12 @@ Endpoint: (POST) http://localhost:8080/orders
 </br>
 <b> Atualização de status de entrega </b> </br> 
 <b> Rota: Set - saiu Para Entrega </b> </br> 
-Endpoint: (PUT) http://localhost:8080/orders/10/saiuparaentrega
+Endpoint: (PUT) https://epdelivery.herokuapp.com/orders/10/saiuparaentrega
 
 </br>
 
 <b> Rota: Set - Entregue </b> </br> 
-Endpoint: (PUT) http://localhost:8080/orders/10/entregue
+Endpoint: (PUT) https://epdelivery.herokuapp.com/orders/10/entregue
 
 </br>
 
