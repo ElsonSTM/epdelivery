@@ -35,14 +35,14 @@ Resquisitos de sofware para testar as rotas e ver a persistencia dos dados no BD
  -- Nome do bd sugestivo: EpDelivery-Heroku 
 
 * Aba Connection </br>
-<p>  Host name: ec2-44-198-24-0.compute-1.amazonaws.com </p> 
+<p>  Host name: ec2-34-233-157-9.compute-1.amazonaws.com </p> 
 <p>-- Port: 5432 </p> 
-<p>-- Database: d20j83effp82t9 </p> 
-<p>-- Username: wlorecngsufeim </p> 
+<p>-- Database: d765hj4p31f71c </p> 
+<p>-- Username: ducoqpioowujlf </p> 
 <p>-- Password: 8f71179e8c8af9aefd4de0369fb210b9127baccb06e3219cbb3200241d8fb4ca </p>         
 * Aba advanced </br>
 
-<p> -- Db restriction: d20j83effp82t9 </P>
+<p> -- Db restriction: d765hj4p31f71c </P>
 </br>
 
 <h2>Criar a tabela no banco de dados</h2>
