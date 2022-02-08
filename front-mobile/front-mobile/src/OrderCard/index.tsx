@@ -4,6 +4,8 @@ import { Order } from '../types';
 import dayjs from 'dayjs';
 import 'dayjs/locale/pt-br';
 import relativeTime from 'dayjs/plugin/relativeTime'
+import 'intl';
+import 'intl/locale-data/jsonp/en';
 
 dayjs.locale('pr-br');
 dayjs.extend(relativeTime);

@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, View, Image, Alert, Linking } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
-import { confirmarEngrega } from '../api';
+import { confirmarEngrega, saiuParaEntrega} from '../api';
 import Header from '../Header';
 import OrderCard from '../OrderCard';
 import { Order } from '../types';
@@ -20,6 +20,17 @@ function OrderDetails({route}: Props) {
 
   const handleOnCancel = () => {
     navigation.navigate('Orders');
+  }
+
+  const handleSaiuParaEntrega = () => {
+    saiuParaEntrega(order.id)
+    .then(() => {
+      Alert.alert(`Pedido ${order.id} saiu para entrega!!`)
+      navigation.navigate('Orders');
+    })
+    .catch(() => {
+      Alert.alert(`Houve um erro ao despachar a entrega do ${order.id}`)
+    })
   }
 
   const handleConfirmarEntrega = () => {
@@ -44,6 +55,9 @@ function OrderDetails({route}: Props) {
       <OrderCard order={order}/>
       <RectButton style={styles.button} onPress={handleComercarNavegacao}>
         <Text style={styles.buttonText}>INICIAR NAVEGAÇÃO</Text>
+      </RectButton>
+      <RectButton style={styles.button} onPress={handleSaiuParaEntrega}>
+        <Text style={styles.buttonText}>SAIU PARA ENTREGA</Text>
       </RectButton>
       <RectButton style={styles.button} onPress={handleConfirmarEntrega}>
         <Text style={styles.buttonText}>CONFIRMAR ENTREGA</Text>
@@ -70,7 +84,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   buttonText: {
-    paddingTop: 15,
+    paddingTop: 12,
     paddingBottom: 15,
     paddingLeft: 50,
     paddingRight: 50,

@@ -7,6 +7,10 @@ export function fetchOrders() {
   return axios(`${API_URL}/orders`)
 }
 
+export function saiuParaEntrega(orderId: number) {
+  return axios.put(`${API_URL}/orders/${orderId}/saiuparaentrega`)
+}
+
 export function confirmarEngrega(orderId: number) {
   return axios.put(`${API_URL}/orders/${orderId}/entregue`)
 }
