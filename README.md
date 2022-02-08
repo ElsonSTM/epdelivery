@@ -11,6 +11,25 @@ Resquisitos de sofware para testar as rotas e ver a persistencia dos dados no BD
 <ol>
 <li> Baixar o workBench e fazer as seguintes configurações do BD na nuvem do heroku, como na figura abaixo:
 
+ <br>
+ 
+![figura 1 - criar server](https://user-images.githubusercontent.com/86759660/152903981-e635cee2-659e-4eca-96aa-5e49936dadb8.png)
+ 
+ <b> Figura - 01 - Criando o bd server heroku </b>
+ 
+ <br>
+ 
+ ![figura 1 - abas 1](https://user-images.githubusercontent.com/86759660/152904393-d5326b7b-ea06-437c-913a-38295136c7d9.png)
+ 
+ <b> Figura 02 - Configurando o server bd Heroku </b>
+ 
+ <br>
+ 
+ ![figura 1 - abas 2](https://user-images.githubusercontent.com/86759660/152904559-ff049182-a389-468d-9fed-de4ab108f0a3.png)
+
+ <b> figura 03 - Setando o banco de dados. </b>
+ <br>
+ 
 * Aba General </br>
 <p>
  -- Nome do bd sugestivo: EpDelivery-Heroku 
@@ -102,7 +121,7 @@ INSERT INTO tb_order_product (order_id, product_id) VALUES (7 , 5);
 
 # Para testar as rotas
 
-2- Dpois de instalado o postman, testar as seguintes rotas com seus respetivos avros.
+2- Depois de instalado o postman, testar as seguintes rotas com seus respetivos avros.
 
 <b> User </b> </br>
 <b> Rota: New user </b> </br>
@@ -150,6 +169,8 @@ Endpoint: (GET) http://localhost:8080/users/1
 <b> Rota: Lista de protudos </b> </br> 
 Endpoint: (GET) http://localhost:8080/products
 
+<br>
+
 <b>Order</b> </br>
 <b> Rota: Lista de pedidos </b> </br> 
 Endpoint: (GET) http://localhost:8080/orders
@@ -177,13 +198,14 @@ Endpoint: (POST) http://localhost:8080/orders
 }
 ````
 </br>
+<b> Atualização de status de entrega </b> </br> 
 <b> Rota: Set - saiu Para Entrega </b> </br> 
 Endpoint: (PUT) http://localhost:8080/orders/10/saiuparaentrega
 
 </br>
 
 <b> Rota: Set - Entregue </b> </br> 
-Endpoint: (PUT) http://localhost:8080/orders/10/saiuparaentrega
+Endpoint: (PUT) http://localhost:8080/orders/10/entregue
 
 </br>
 
