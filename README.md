@@ -205,7 +205,7 @@ Endpoint: (PUT) http://localhost:8080/orders/10/saiuparaentrega
 </br>
 
 <b> Rota: Set - Entregue </b> </br> 
-Endpoint: (PUT) http://localhost:8080/orders/10/saiuparaentrega
+Endpoint: (PUT) http://localhost:8080/orders/10/entregue
 
 </br>
 
